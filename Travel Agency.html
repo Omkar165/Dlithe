@@ -44,9 +44,24 @@
             bottom: 0;
             width: 100%;
         }
+        .image-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translateX(200%);
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            animation: showImage 10s forwards; /* Delay of 15 seconds, then fade-in */
+        }
+
+        @keyframes showImage {
+            0% { opacity: 0; }
+            93.75% { opacity: 0; } /* Stays invisible for 15 seconds */
+            100% { opacity: 1; }
+        }
     </style>
 </head>
-<body>
+<body style="background-color: antiquewhite;">
 
 <header>
     <h1>Omkar Travel Agency</h1>
@@ -76,6 +91,12 @@
 <b>Travel Insurance </b>– Secure your journey with trusted travel coverage.</br>
 <b>Visa Assistance </b>– Hassle-free visa processing for a smooth journey.</br>
 
+<div class="image-container">
+    <a href="newswebsite.html" target="_blank">
+    <h2><img src="news.jpeg" alt="travel" width="160px" height="100px"></h2></a>
+    <p><strong><a href="registration.html" input type="submit" value="For add free subscription" target="_blank">Ads free subscription</a></strong></p>
+</div>
+
 <p>
     <p><b><u><i>Why Choose Us?</i></u> </b></p>
 
@@ -84,7 +105,7 @@
 <b>Expert Travel Guidance</b> – Professional planners to craft your perfect trip.</br>
 </p>
 </p>
-
+</div>
 <footer>
     <p>&copy; 2025 Omkar Travel Agency</p>
 </footer>

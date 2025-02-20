@@ -51,14 +51,27 @@
             padding: 15px;
             border-radius: 5px;   
         }
+        .image-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translateX(200%);
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            animation: showImage 5s forwards;
+        }
+
+        @keyframes showImage {
+            0% { opacity: 0; }
+            93.75% { opacity: 0; }
+            100% { opacity: 1; } 
+        }
     </style>
 </head>
-<body>
-
+<body style="background-color: antiquewhite;">
 <header>
-    <h1><p style="color: rgb(255, 149, 0);">News Website</p> </h1>
+    <h1><p style="color: rgb(255, 149, 0);"><u></u>News Website</p> </h1>
 </header>
-
 <nav>
     <a href="#">Home</a>
     <a href="#">World</a>
@@ -85,6 +98,13 @@
         <p><strong>By HT News Desk | February 19, 2025</strong></p>
         <p>Gyanesh Kumar's name was proposed by a committee headed by PM Narendra Modi, home minister Amit Shah, and leader of opposition in the Lok Sabha Rahul Gandhi....</p>
     </div>
+
+    <div class="image-container">
+        <a href="Travel Agency.html" target="_blank">
+        <img src="travel.jpeg" alt="Advertisement" width="185px" height="150px" style="top: 185px;right: 150px;"></a>
+        <p><strong><a href="registration.html">Bookings are available</a></strong></p>
+    </div>
+
 
     <div class="news-article">
         <h2>Maha Kumbh: Prayagraj river water fails bathing quality standards, CPCB finds high faecal coliform levels</h2>
@@ -114,7 +134,8 @@
         <a href="Travel Agency.html" target="_blank">Click here to Check</a>
     </div>
 
-    <!-- Add more articles here -->
+
+
 </div>
 
 <footer>
