@@ -1,3 +1,5 @@
+
+
 .todo-container {
   width: 300px;
   margin: auto;
@@ -15,6 +17,7 @@
 input {
   padding: 5px;
   width: 180px;
+  height: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
 }
@@ -48,14 +51,14 @@ li {
 }
 
 li.completed span {
-  text-decoration: line-through;
+  text-decoration:line-through ;
   color: grey;
 }
 
 li button {
   background-color: red;
   padding: 3px 6px;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 li button:hover {
