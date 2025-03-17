@@ -28,13 +28,13 @@ const BalanceSection = ({ onCheckBalance, onSendMoney, onBankTransfer, onScanQR 
   );
 };
 
-const BillAndRechargeSection = ({ onPayBills, onRecharge }) => {
+const BillAndRechargeSection = () => {
   return (
     <section className="bill-recharge-section">
       <h3>Bill Payments & Recharge</h3>
       <div className="bill-actions">
-        <button onClick={onPayBills}>Pay Bills</button>
-        <button onClick={onRecharge}>Recharge</button>
+        <button>Pay Bills</button>
+        <button>Recharge</button>
       </div>
     </section>
   );
@@ -49,11 +49,7 @@ const AddBankAccount = ({ onAddAccount }) => {
 };
 
 const App = () => {
-  const [balance] = useState(10000.35);
-  const [accounts, setAccounts] = useState([]);
-  const handleAddAccount = (newAccount) => {
-    setAccounts([...accounts, newAccount]);
-  };
+  const [balance, setBalance] = useState(5000.00);
 
   const handleCheckBalance = () => {
     alert(`Your balance is ₹${balance}`);
@@ -71,20 +67,12 @@ const App = () => {
     alert('Soon it will be updated');
   };
 
-  
-
-  const handleRecharge = () => {
+  const handleAddBankAccount = () => {
     alert('Soon it will be updated');
   };
-
-  const handlePayBills = () => {
-    alert('Soon it will be updated');
-  };
-  
 
   return (
     <div className="App">
-      
       <Header />
       <BalanceSection 
         onCheckBalance={handleCheckBalance}
@@ -92,11 +80,8 @@ const App = () => {
         onBankTransfer={handleBankTransfer}
         onScanQR={handleScanQR}
       />
-      <BillAndRechargeSection 
-        onPayBills={handlePayBills}
-        onRecharge={handleRecharge}
-      />
-      <AddBankAccount onAddAccount={handleAddAccount} accounts={accounts} />
+      <BillAndRechargeSection />
+      <AddBankAccount onAddAccount={handleAddBankAccount} />
     </div>
   );
 };
